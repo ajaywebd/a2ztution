@@ -1,92 +1,81 @@
 import React from "react";
 import Slider from "react-slick";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./testimonial.css"; // Custom CSS
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Testimonial = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-    ],
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
   };
+
+  const testimonials = [
+    {
+      text: "I’m so happy I signed up for online tuition classes with Excellent tuitions! The class 10th course is really well put together and easy to understand. The explanations are clear and concise, and I’m making great progress in my studies.",
+      author: "Vikash Maurya",
+      location: "Lakhimpur",
+      image: "https://via.placeholder.com/100", // Replace with actual image URL
+      website: "#",
+    },
+    {
+      text: "I was struggling to keep up with my studies, but this online tuition platform has really helped me. The concepts are explained well, and I can easily follow along. I’m really grateful for the course learnt from your tutors!",
+      author: "Ajay Maurya",
+      location: "Delhi",
+      image: "https://via.placeholder.com/100", // Replace with actual image URL
+      website: "#",
+    },
+    // Add more testimonials as needed
+  ];
 
   return (
     <section id="testimonials" className="testimonials py-5 bg-light">
       <div className="container">
-        <div className="row justify-content-center mb-4">
-          <div className="col-lg-8 text-center">
-            <h2>What Our Clients Say</h2>
-            <p className="text-muted">
-              Hear from our satisfied customers who have enjoyed our services.
-            </p>
-          </div>
+        <div className="text-center mb-5">
+          <h2 style={{ fontFamily: "Cursive", color: "#333" }}>Testimonials</h2>
+          <h3
+            style={{
+              fontFamily: "Cursive",
+              fontWeight: "bold",
+              color: "#555",
+            }}>
+            Experiences Of Students With Us
+          </h3>
         </div>
 
         <Slider {...settings}>
-          <div className="testimonial-item p-4 bg-white">
-            <div className="testimonial-content">
-              <p>
-                "This is the best service I have ever used. The team was
-                professional and the results were fantastic."
-              </p>
+          {testimonials.map((testimonial, index) => (
+            <div key={index}>
+              <div className="card bg-dark text-white h-100 p-4 mx-3">
+                <div className="card-body">
+                  <p className="card-text">{testimonial.text}</p>
+                  <div className="d-flex align-items-center mt-4">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.author}
+                      className="rounded-circle me-3"
+                      style={{ width: "50px", height: "50px" }}
+                    />
+                    <div>
+                      <h5 className="mb-0">{testimonial.author}</h5>
+                      <p className="mb-0">{testimonial.location}</p>
+                      <a
+                        href={testimonial.website}
+                        className="text-white text-decoration-none">
+                        website
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="testimonial-author mt-4">
-              <h5>John Doe</h5>
-              <p className="text-muted">CEO, Company</p>
-            </div>
-          </div>
-
-          <div className="testimonial-item p-4 bg-white">
-            <div className="testimonial-content">
-              <p>
-                "I was thoroughly impressed with the level of service and the
-                quality of the final product."
-              </p>
-            </div>
-            <div className="testimonial-author mt-4">
-              <h5>Jane Smith</h5>
-              <p className="text-muted">Marketing Director</p>
-            </div>
-          </div>
-
-          <div className="testimonial-item p-4 bg-white">
-            <div className="testimonial-content">
-              <p>
-                "Highly recommend this company for anyone looking for top-notch
-                service and results."
-              </p>
-            </div>
-            <div className="testimonial-author mt-4">
-              <h5>Michael Brown</h5>
-              <p className="text-muted">Entrepreneur</p>
-            </div>
-          </div>
-
-          {/* Add more testimonials as needed */}
+          ))}
         </Slider>
       </div>
     </section>

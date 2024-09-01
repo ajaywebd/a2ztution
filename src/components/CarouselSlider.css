@@ -14,18 +14,18 @@
 
 @media (max-width: 768px) {
   .carousel-container {
-    height: 50vh; /* Reduce the height for smaller screens */
+    height: 30vh; /* Reduce the height for smaller screens */
   }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .carousel-container {
-    height: 65vh; /* Adjust height for medium-sized devices */
+    height: 40vh; /* Adjust height for medium-sized devices */
   }
 }
 
 @media (min-width: 1200px) {
   .carousel-container {
-    height: 75vh; /* Maintain a larger height for larger displays */
+    height: 40vh; /* Maintain a larger height for larger displays */
   }
 }

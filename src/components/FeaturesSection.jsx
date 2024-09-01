@@ -12,6 +12,24 @@ import {
 const FeaturesSection = () => {
   return (
     <Container className="text-center bg-light my-5">
+      <br />
+      <h1>Welcome To a2zTution</h1>
+      <p>
+        A2Z Tuition is a boutique tutoring centre in operation since 2013
+        offering a safe, nurturing, and engaging environment where your child
+        will be provided with high quality tuition and assistance they need to
+        foster in their academic learning. Our vision and aim is to maximise the
+        learning experience for students of various academic abilities by
+        creating an enriching learning experience through interactive classes
+        and discussions. We strive to prepare our students to excel at school by
+        aligning our tuition programs with the Australian Curriculum and New
+        South Wales syllabus so students will feel confident applying their
+        understanding, skills and strategies that are taught at our centre back
+        into their school classroom.
+      </p>
+      <br />
+      <br />
+      <br />
       <h6 className="text-muted">WHY CHOOSE US?</h6>
       <h2 className="mb-5">Offer for you</h2>
       <Row>
