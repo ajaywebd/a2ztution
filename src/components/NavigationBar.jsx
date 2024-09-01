@@ -17,39 +17,12 @@ const NavigationBar = () => {
             <Nav.Link as={Link} to="/" className="nav-item">
               Home
             </Nav.Link>
-            <NavDropdown
-              title="Disease"
-              id="basic-nav-dropdown"
-              className="nav-item">
-              <NavDropdown.Item as={Link} to="/disease/maleDisease">
-                Male Disease
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/disease/femaleDisease">
-                Female Disease
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/disease/childrenDisease">
-                Children Disease
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown
-              title="Exercises & Yoga"
-              id="basic-nav-dropdown"
-              className="nav-item">
-              <NavDropdown.Item as={Link} to="/exercise/aerobicExercise">
-                Aerobic Exercise
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="exercise/pilateExercise">
-                Pilates Exercise
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="exercise/childrenExercise">
-                Children Exercise
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="exercise/yogaAsans">
-                Yoga Asans
-              </NavDropdown.Item>
-            </NavDropdown>
+
             <Nav.Link as={Link} to="/nutrition" className="nav-item">
-              Nutritions
+              Courses
+            </Nav.Link>
+            <Nav.Link as={Link} to="/nutrition" className="nav-item">
+              About
             </Nav.Link>
             <Nav.Link as={Link} to="/contact" className="nav-item">
               Contact
